@@ -1,5 +1,5 @@
 /*
- * Emerald is a simple blog theme built for Jekyll.
+ * Monochrome is a simple, responsive blog theme built for Jekyll.
  */
 /*- Base reset -*/
 * {
@@ -15,26 +15,78 @@ html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, img {
 /*- Base color -*/
 /*- Base settings -*/
 html {
-  background-color: #FDFDFD;
+  background-color: #FFFFFF;
   font-size: 16px;
   line-height: 1.5;
-  color: #222222; }
+  color: #333333; }
   @media (min-width: 940px) {
     html {
       font-size: 18px; } }
 
+body {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 10px; }
+
 /*- Link -*/
 a {
-  color: #008A3C;
+  color: #333333;
   text-decoration: none;
   font-weight: 700; }
   a:hover, a:focus {
-    color: #007131; }
+    color: #262626; }
+
+/* Common classes */
+.right {
+  float: right; }
+
+.left {
+  float: left; }
+
+.clear {
+  clear: both; }
+
+.parent {
+  display: flex; }
+
+.inner {
+  align-self: center; }
+
+.justify-center {
+  justify-content: center; }
+
+.justify-spaceBetween {
+  justify-content: space-between; }
+
+.w100 {
+  width: 100%; }
+
+.h100 {
+  height: 100%; }
+
+.wh100 {
+  width: 100%;
+  height: 100%; }
+
+.absolute {
+  position: absolute; }
+
+.relative {
+  position: relative; }
+
+.top {
+  top: 0; }
+
+.bottom {
+  bottom: 0; }
 
 /*- Typography -*/
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  letter-spacing: 0.01em; }
+  font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #333; }
 
 /*- Typography for medium and small screen, based on 16px font-size -*/
 p, ul, ol {
@@ -77,7 +129,7 @@ blockquote {
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   border-radius: 4px;
-  background-color: #f0f0f0;
+  background-color: #f2f2f2;
   padding: 0 1.5em;
   /* 24px/18px */ }
   blockquote p, blockquote ul, blockquote ol {
@@ -126,7 +178,7 @@ blockquote {
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     border-radius: 4px;
-    background-color: #f0f0f0;
+    background-color: #f2f2f2;
     padding: 0 1.33334em;
     /* 24px/18px */ }
     blockquote p, blockquote ul, blockquote ol {
@@ -136,7 +188,7 @@ blockquote {
 /* Navigation */
 #nav a, #nav-left a {
   display: block;
-  color: #FDFDFD;
+  color: #333333;
   padding: 0.33334em 0;
   font-size: 1.5em;
   font-weight: 400; }
@@ -144,18 +196,18 @@ blockquote {
     #nav a, #nav-left a {
       font-size: 1em; } }
   #nav a:hover, #nav-left a:hover {
-    background-color: #00a447; }
+    background-color: rgba(13, 13, 13, 0.6); }
 #nav span, #nav-left span {
   font-weight: 200; }
 
 #nav {
   width: 14rem;
   position: fixed;
-  background-color: #008A3C;
+  background-color: #FFFFFF;
   top: 0;
   bottom: 0;
   right: -14rem;
-  color: #FDFDFD;
+  color: #FFFFFF;
   opacity: 0.95;
   -webkit-transition: all 0.3s ease-in;
   -moz-transition: all 0.3s ease-in;
@@ -168,11 +220,11 @@ blockquote {
 #nav-left {
   width: 14rem;
   position: fixed;
-  background-color: #008A3C;
+  background-color: #FFFFFF;
   top: 0;
   bottom: 0;
   left: -14rem;
-  color: #FDFDFD;
+  color: #FFFFFF;
   opacity: 0.95;
   -webkit-transition: all 0.3s ease-in;
   -moz-transition: all 0.3s ease-in;
@@ -203,6 +255,14 @@ blockquote {
     #nav-left.menu-open-left {
       width: 30%; } }
 
+@media (max-width: 940px) {
+  #nav-links {
+    display: none; } }
+#nav-links a {
+  padding-left: 10px;
+  color: #333333;
+  font-weight: 300; }
+
 /* Separator after menu */
 #nav-list:after {
   display: block;
@@ -210,7 +270,7 @@ blockquote {
   width: 5rem;
   height: 1px;
   margin: 23px auto;
-  background-color: #FDFDFD; }
+  background-color: #333333; }
 
 /* Icon menu */
 #nav-menu {
@@ -220,6 +280,9 @@ blockquote {
   right: 25px;
   z-index: 10;
   height: 24px; }
+  @media (min-width: 940px) {
+    #nav-menu {
+      display: none; } }
 
 #nav-menu-left {
   display: block;
@@ -228,11 +291,14 @@ blockquote {
   left: 25px;
   z-index: 10;
   height: 24px; }
+  @media (min-width: 940px) {
+    #nav-menu-left {
+      display: none; } }
 
 #menu {
   height: 4px;
   width: 1.5em;
-  background-color: #7b7b7b;
+  background-color: #333333;
   margin-top: 8px; }
   #menu:after, #menu:before {
     content: "";
@@ -240,7 +306,7 @@ blockquote {
     position: relative;
     height: 4px;
     width: 1.5em;
-    background-color: #7b7b7b;
+    background-color: #333333;
     transition: all 0.3s ease-in; }
   #menu:before {
     top: -8px; }
@@ -254,14 +320,14 @@ blockquote {
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    background-color: #FDFDFD; }
+    background-color: #333333; }
   #menu.btn-close:after {
     top: -4px;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-    background-color: #FDFDFD; }
+    background-color: #333333; }
 
 /* Main content */
 .fixed {
@@ -272,32 +338,24 @@ blockquote {
       position: static; } }
 
 #container {
-  margin: 0 auto;
-  max-width: 730px;
-  padding: 0 1.5rem; }
+  margin: 0 auto; }
 
 #header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.14);
   text-align: center;
-  padding: 24px 0;
+  margin-bottom: 3em;
+  height: 5em;
   position: relative; }
   #header a {
     text-decoration: none;
-    color: #222222;
     display: inline-block; }
-  #header img {
-    max-height: 72px;
-    margin: 0 auto;
-    display: block; }
+  #header div {
+    margin: 0 auto; }
   #header h1 {
-    font-family: 'Signika', sans-serif;
-    font-weight: 600; }
-  #header:after {
-    display: block;
-    content: '';
-    width: 5rem;
-    height: 1px;
-    margin: 23px auto;
-    background-color: #d5d5d5; }
+    font-size: 2em; }
+    #header h1 span {
+      color: rgba(0, 0, 0, 0.6);
+      font-weight: 300; }
 
 /* Posts */
 #posts li {
@@ -315,11 +373,11 @@ blockquote {
   width: 5rem;
   height: 1px;
   margin: 23px auto;
-  background-color: #d5d5d5; }
+  background-color: #e6e6e6; }
 
 .by-line {
   display: block;
-  color: #626262;
+  color: #737373;
   line-height: 1.5em;
   /* 24px/16px */
   margin-bottom: 1.5em;
@@ -328,7 +386,7 @@ blockquote {
   @media (min-width: 940px) {
     .by-line {
       display: block;
-      color: #626262;
+      color: #737373;
       line-height: 1.3334em;
       /* 24px/18px */
       margin-bottom: 1.3334em;
@@ -345,11 +403,11 @@ img {
   -ms-border-radius: 4px;
   border-radius: 4px; }
 
-img[title="Emerald"] {
+img[title="Monochrome"] {
   box-shadow: 0 2px 6px #ddd; }
 
 code {
-  color: #7b7b7b;
+  color: #8c8c8c;
   background-color: white; }
 
 /* Set the vertical rhythm (and padding-left) for lists inside post content */
@@ -371,14 +429,14 @@ code {
   text-align: center;
   margin: 2.666668em; }
   .pagination span {
-    background-color: #f0f0f0;
-    color: #222222; }
+    background-color: #f2f2f2;
+    color: #333333; }
   .pagination a:hover {
-    background-color: #00a447; }
+    background-color: #404040; }
 
 .page-item {
-  background-color: #008A3C;
-  color: #FDFDFD;
+  background-color: #4d4d4d;
+  color: #FFFFFF;
   padding: 4px 8px;
   font-weight: 400;
   padding: 0.5em 1em;
@@ -389,8 +447,8 @@ code {
 
 /* Footer */
 footer {
-  background-color: #008A3C;
-  color: #FDFDFD;
+  background-color: #FFFFFF;
+  color: #333333;
   text-align: center;
   padding: 0.6667em 0; }
 
@@ -399,7 +457,7 @@ footer {
  * https://github.com/mojombo/tpw/blob/master/css/syntax.css
  */
 .lineno {
-  color: #bdbdbd;
+  color: #bfbfbf;
   margin-right: 1em; }
 
 .highlight .c {

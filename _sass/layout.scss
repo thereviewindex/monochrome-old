@@ -5,7 +5,7 @@
 #nav, #nav-left { 
   a {
     display: block;
-    color: $background-color;
+    color: $text-color;
     padding: 0.33334em 0;
     font-size: 1.5em;
     font-weight: 400;
@@ -13,7 +13,7 @@
       font-size: 1em;
     }
     &:hover {
-      background-color: lighten($main-color, 5%);
+      background-color: lighten($text-light-color, 5%);
     }
   }
   span {
@@ -39,6 +39,17 @@
   @include open(14rem);
 }
 
+#nav-links {
+  @media (max-width: 940px) {
+    display:none;
+  }   
+  a {
+    padding-left: 10px;
+    color: $text-color;
+    font-weight: 300
+  }
+}
+
 /* Separator after menu */
 
 #nav-list:after {
@@ -47,23 +58,29 @@
   width: 5rem;
   height: 1px;
   margin: 23px auto;
-  background-color: $background-color;
+  background-color: $text-color;
 }
 
 /* Icon menu */
 
 #nav-menu {
   @include icon-position(right);
+  @media (min-width: 940px) {
+    display:none;
+  }
 }
 
 #nav-menu-left {
   @include icon-position(left);
+  @media (min-width: 940px) {
+    display:none;
+  }
 }
 
 #menu {
   height: 4px;
   width: 1.5em;
-  background-color: lighten($text-color, 35%);
+  background-color: $text-color;
   margin-top: 8px;
   &:after, &:before {
     content: "";
@@ -71,7 +88,7 @@
     position: relative;
     height: 4px;
     width: 1.5em;
-    background-color: lighten($text-color, 35%);
+    background-color: $text-color;
     transition: all 0.3s ease-in;
   }
   &:before {
@@ -89,7 +106,7 @@
        -moz-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
-    background-color: $background-color;
+    background-color: $text-color;
   }
   &.btn-close:after {
     top: -4px;
@@ -97,7 +114,7 @@
        -moz-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
-    background-color: $background-color;
+    background-color: $text-color;
   }
 }
 
@@ -113,35 +130,27 @@
 
 #container {
 	margin:0 auto;
-	max-width: 730px;
-	padding: 0 1.5rem;
 }
 
 #header {
-	text-align: center;
-  padding: 24px 0;
+  border-bottom:  1px solid rgba(0,0,0,0.14);
+  text-align: center;
+  margin-bottom: 3em;
+  height: 5em;
   position: relative;
   a {
   	text-decoration: none;
-  	color: $text-color;
   	display: inline-block;
   }
-  img {
-  	max-height: 72px;
-  	margin: 0 auto;
-  	display: block;
+  div {
+    margin: 0 auto;
   }
   h1 {
-  	font-family: 'Signika', sans-serif; //Emerald logo font
-    font-weight: 600;
-  }
-  &:after {
-  	display: block;
-    content: '';
-    width: 5rem;
-    height: 1px;
-    margin: 23px auto;
-    background-color: lighten($text-color, 70%);
+    font-size: 2em;
+    span {
+      color: $text-light-color;
+      font-weight: 300;
+    }
   }
 }
 
@@ -195,7 +204,7 @@ img {
           border-radius: 4px;
 }
 
-img[title="Emerald"] {
+img[title="Monochrome"] {
     box-shadow: 0 2px 6px #ddd;
   }
 
@@ -230,11 +239,11 @@ code {
     color: $text-color;
   }
   a:hover {
-    background-color: lighten($main-color, 5%);
+    background-color: lighten($text-color, 5%);
   }
 }
 .page-item {
-  background-color: $main-color;
+  background-color: lighten($text-color, 10%);
   color: $background-color;
   padding: 4px 8px;
   font-weight: 400;
@@ -248,8 +257,8 @@ code {
 /* Footer */
 
 footer {
-  background-color: $main-color;
-  color: $background-color;
+  background-color: $background-color;
+  color: $text-color;
   text-align: center;
   padding: 0.6667em 0;
 }

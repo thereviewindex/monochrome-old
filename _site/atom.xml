@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Emerald | A simple Jekyll blog</title>
+ <title>Monochrome | A minimal, responsive Jekyll blog theme</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2017-02-14T09:48:32+05:30</updated>
+ <updated>2017-02-18T18:18:16+05:30</updated>
  <author>
-   <name>Jacopo Rabolini</name>
-   <uri>http://www.jacoporabolini.com</uri>
-   <email>hello@jacoporabolini.com</email>
+   <name>The Review Index</name>
+   <uri>https://thereviewindex.com</uri>
+   <email>root@thereviewindex.com</email>
  </author>
 
  
@@ -18,7 +18,7 @@
    <link href="http://localhost:4000/typography"/>
    <id>http://localhost:4000/typography</id>
    <updated>2015-03-19T00:00:00+05:30</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/emerald/img/img-test.png&quot; alt=&quot;Test&quot; title=&quot;Test&quot; /&gt; Lorem ipsum dolor sit amet, &lt;a href=&quot;http://www.example.com&quot;&gt;consectetur adipisicing&lt;/a&gt; elit. Id, aliquam magni et officiis nemo nihil aliquid placeat alias. Eum voluptates ducimus, nobis ex illum laboriosam quidem corrupti impedit ratione in voluptatum amet beatae facilis temporibus voluptate praesentium voluptatibus! At ab, iusto error amet eveniet...</content>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/monochrome/img/img-test.png&quot; alt=&quot;Test&quot; title=&quot;Test&quot; /&gt; Lorem ipsum dolor sit amet, &lt;a href=&quot;http://www.example.com&quot;&gt;consectetur adipisicing&lt;/a&gt; elit. Id, aliquam magni et officiis nemo nihil aliquid placeat alias. Eum voluptates ducimus, nobis ex illum laboriosam quidem corrupti impedit ratione in voluptatum amet beatae facilis temporibus voluptate praesentium voluptatibus! At ab, iusto error amet eveniet...</content>
  </entry>
 
  
