@@ -28,6 +28,7 @@ defaults:
 # Plugins
 gems:
   - jekyll-paginate
+  - jekyll-sitemap
 
 # Custom variables
 version: "1.0.0"

@@ -4,13 +4,40 @@ Monochrome is a minimal, responsive, ready to use Jekyll theme for blogging.
 
 ## Features
 
-- Completely responsive
+- Completely responsive and mobile first
 - Clean SEO friendly URLs, auto-generated from post title (no messy dates in the url)
 - SEO title/description integration
+- Sitemap ready
+- Easy customization for header, footer, navigation links, colors, favicon etc
 - Default Monochrome Color Palette - black, white, greys
-- Easy customization for header, footer, navigation links, colors, etc
 
-## Get Started
+## Install/Setup Jekyll
+
+(Skip if you already have Jekyll 2.2)
+
+1. Make sure Ruby 2.2 is installed 
+```
+sudo apt-get install ruby2.2
+sudo apt-get install ruby2.2-dev
+```
+2. Install bundle: `sudo gem install bundler`
+3. Install jekyll: `sudo gem install jekyll`
+
+### Resources
+
+- We found the jekyll tutorials on youtube very quick and useful to get started
+- [Jekyll documentation](http://jekyllrb.com)   
+
+
+## Install Monochrome dependencies
+
+```
+sudo gem install jekyll-paginate
+sudo gem install jekyll-sitemap
+
+```
+
+## Get Started with Monochrome
 
 ### Option 1 
 
