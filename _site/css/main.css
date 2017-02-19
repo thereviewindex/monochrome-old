@@ -352,7 +352,8 @@ blockquote {
   #header div {
     margin: 0 auto; }
   #header h1 {
-    font-size: 2em; }
+    font-size: 2em;
+    padding-bottom: 0; }
     #header h1 span {
       color: rgba(0, 0, 0, 0.6);
       font-weight: 300; }

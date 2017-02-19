@@ -2,8 +2,15 @@
 Monochrome is a minimal, responsive, ready to use Jekyll theme for blogging. 
 (Built on top of Emerald Jekyll theme)
 
+## Features
 
-## Setup
+- Completely responsive
+- Clean SEO friendly URLs, auto-generated from post title (no messy dates in the url)
+- SEO title/description integration
+- Default Monochrome Color Palette - black, white, greys
+- Easy customization for header, footer, navigation links, colors, etc
+
+## Get Started
 
 ### Option 1 
 
@@ -16,13 +23,21 @@ Monochrome is a minimal, responsive, ready to use Jekyll theme for blogging.
 Note: If you fork the repository, your version of the repository will not be searchable. If you want searchability, we suggest you use the next option.
 
 
-### Option 2 - Download
+### Option 2
 
 - Simply download the .zip folder from the repository github page
 - Extract the contents from the .zip folder into your local folder
+- cd into monochrome/
 - Run 'jekyll serve' and open browser to 'localhost:4000/blog/' to see your changes
 - Create a repository in github and push the files
 - (Optional) Host with github pages
+
+## Write a Post
+
+- cd into  ``_posts/``
+- create new file with format yyyy-mm-dd-title-of-post.md
+- add title/description (refer any of the test posts)
+- add markdown and save
 
 
 ## Customization Options
@@ -38,9 +53,10 @@ Moreover select a reverse option that allows to move the navigation menu to the 
 ### Colors
 
 The basic colors are set into the ``base.scss`` file:
-- $main-color: used for the menu, title, link and footer
 - $background-color: used for background and links in the navigation menu
 - $text-color: used for text and title in posts and pages 
+- $text-light-color: used for text lighter than text-color
+- $text-dark-color: used for text darker than text-color
 
 To customize the colors, just set the values in HEX, RGB (or RGBa) or any other format accepted by CSS.
 
@@ -56,7 +72,7 @@ There are two branches:
 
 ### Baseurl
 
-You can change the 'baseurl' value in the 'config.yml' file, from '/blog' to your preferred directory/project name (example '/xyz' or '/' to install in root)
+You can change the 'baseurl' value in the 'config.yml' file, from '/monochrome' to your preferred directory/project name (example '/xyz' or '/' to install in root)
 
 ### Typography
 
